@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: transparent; /* Entire page transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d2d2d2;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+}
+
+canvas {
+  display: block;
+  background-color: transparent; /* Canvas is transparent */
+}
+
+.score-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white; 
+  font-weight: bold; 
+  z-index: 20; 
+}
+
+.lives-container {
+  position: absolute;
+  top: 40px; /* Positioned below the score */
+  right: 15px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: bold;
+  z-index: 20;
+}
+
+.message-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.message-screen h1 {
+  font-size: 48px;
+  margin: 0;
+  color: white; 
+  font-weight: bold; 
+}
+
+.message-screen p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: white; 
+}
+
+#leaderboard {
+  margin-top: 30px;
+  width: 300px; /* Made leaderboard wider for wallets */
+}
+
+#leaderboard h2 {
+  font-size: 24px;
+  color: white;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+#leaderboard ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: white;
+}
+
+#leaderboard li {
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left; /* Align scores to the left */
+}
